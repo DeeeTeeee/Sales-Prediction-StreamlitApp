@@ -18,13 +18,8 @@ dt_model = joblib.load('ml.joblib')
 # Add a title and subtitle
 st.write("<center><h1>Sales Prediction App</h1></center>", unsafe_allow_html=True)
 
-#image = Image.open("grocery_shopping_woman.png")
-
-# Display the image
-#st.image(image, width=600)
-
 # Load the image
-image = Image.open("grocery_shopping_woman.png")
+image = Image.open("copofav.jpg")
 
 # Set up the layout
 col1, col2, col3 = st.columns([1, 3, 3])
@@ -65,7 +60,7 @@ with col2:
     input_data['end_month'] = st.selectbox("end_month",['True','False'])
 
 
-# Define CSS style for the download button
+
 # Define the custom CSS
 predict_button_css = """
     <style>
