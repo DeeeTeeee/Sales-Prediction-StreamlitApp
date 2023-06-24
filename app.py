@@ -9,14 +9,20 @@ from PIL import Image
 import base64
 
 
-num_imputer = joblib.load('numerical_imputer.joblib')
-cat_imputer = joblib.load('categorical_imputer.joblib')
-encoder = joblib.load('encoder.joblib')
-scaler = joblib.load('scaler.joblib')
-dt_model = joblib.load('ml.joblib')
+num_imputer = joblib.load('assets\\numerical_imputer.joblib')
+cat_imputer = joblib.load('assets\\categorical_imputer.joblib')
+encoder = joblib.load('assets\\encoder.joblib')
+scaler = joblib.load('assets\\scaler.joblib')
+dt_model = joblib.load('assets\\ml.joblib')
+
 
 # Add a title and subtitle
 st.write("<center><h1>Sales Prediction App</h1></center>", unsafe_allow_html=True)
+
+#image = Image.open("grocery_shopping_woman.png")
+
+# Display the image
+#st.image(image, width=600)
 
 # Load the image
 image = Image.open("copofav.jpg")
@@ -60,7 +66,7 @@ with col2:
     input_data['end_month'] = st.selectbox("end_month",['True','False'])
 
 
-
+# Define CSS style for the download button
 # Define the custom CSS
 predict_button_css = """
     <style>
